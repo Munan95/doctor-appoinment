@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PureHealth — Smart Health Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { DEFAULT: '#0056D2', dark: '#0044a8' },
+            accent: { DEFAULT: '#14A098' },
+            heading: '#222222',
+            body: '#666666',
+            surface: '#f5f8fc',
+            border: '#e8edf3',
+          },
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif'],
+          },
+          boxShadow: {
+            card: '0 4px 24px rgba(0, 40, 120, 0.08)',
+            'card-hover': '0 12px 32px rgba(0, 40, 120, 0.12)',
+            'btn-hover': '0 6px 20px rgba(0, 86, 210, 0.35)',
+          },
+        },
+      },
+    };
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .hero-blob {
+        filter: invert(77%) sepia(21%) saturate(1200%) hue-rotate(185deg) brightness(1.05);
+      }
+      .icon-white { filter: brightness(0) invert(1); }
+    }
+  </style>
+</head>
+
+<body class="font-sans text-body bg-white leading-relaxed overflow-x-hidden antialiased">
+
+  <!-- Top bar -->
+  <div class="bg-primary text-white text-[13px]">
+    <div class="max-w-[1200px] mx-auto px-6 flex flex-wrap items-center justify-between gap-4 min-h-10">
+      <div class="flex flex-wrap items-center">
+        <a href="tel:+11234567890" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+          <img src="./assets/phone-1.png" alt="" class="w-4 h-4 icon-white" />
+          +1 (123) 456-7890
+        </a>
+        <img src="./assets/divider.png" alt="">
+        <a href="mailto:hello@medicare.com" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+          <svg class="w-[15px] h-[15px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="4" width="20" height="16" rx="2" />
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+          </svg>
+          hello@medicare.com
+        </a>
+      </div>
+      <div class="flex items-center gap-4">
+        <span class="opacity-90 hidden sm:inline">Follow Us:</span>
+        <div class="flex items-center gap-2.5">
+          <a href="#" class="hover:opacity-80 transition-opacity" aria-label="Facebook"><img src="./assets/facebook.png"
+              alt="Facebook" class="h-4 icon-white" /></a>
+          <a href="#" class="hover:opacity-80 transition-opacity" aria-label="Twitter"><img src="./assets/twitter .png"
+              alt="Twitter" class="h-4 icon-white" /></a>
+          <a href="#" class="hover:opacity-80 transition-opacity" aria-label="LinkedIn"><img src="./assets/linkedin.png"
+              alt="Social" class="h-4 icon-white" /></a>
+          <a href="#" class="hover:opacity-80 transition-opacity" aria-label="Instagram"><img src="./assets/instagram.png"
+              alt="Social" class="h-4 icon-white" /></a>
+        </div>
+        <div class="flex items-center gap-[3px] cursor-pointer pl-3 border-l border-white/30">
+          <img src="./assets/earth-line.png" alt="" class="w-4 icon-white" />
+          EN
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
+            <path fill-rule="evenodd"
+              d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
+              clip-rule="evenodd" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="bg-white py-1 sticky top-0 z-50 shadow-[0_1px_0_#e8edf3] relative">
+    <div class="max-w-[1200px] mx-auto px-6 flex items-center justify-between gap-2 min-h-[72px]">
+
+      <div>
+        <a href="#" class="flex items-center gap-2.5 shrink-0">
+          <img src="./assets/human-1.png" alt="">
+          <span class="text-green-600 text-[22px] font-bold text-heading">
+            <span class="text-accent">PureHealth</span>
+          </span>
+        </a>
+      </div>
+
+      <div class="flex gap-9">
+        <nav class="hidden md:flex items-center gap-7">
+          <a href="#" class="flex items-center text-[15px] font-medium text-primary">
+            Home <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+              <path fill-rule="evenodd"
+                d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                clip-rule="evenodd" />
+            </svg>
+          </a>
+          <a href="#"
+            class="flex items-center text-[15px] font-medium text-heading hover:text-primary transition-colors">
+            Shop <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+              <path fill-rule="evenodd"
+                d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                clip-rule="evenodd" />
+            </svg>
+          </a>
+          <a href="#"
+            class="flex items-center text-[15px] font-medium text-heading hover:text-primary transition-colors">
+            Pages <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+              <path fill-rule="evenodd"
+                d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                clip-rule="evenodd" />
+            </svg>
+          </a>
+          <a href="#"
+            class="flex items-center text-[15px] font-medium text-heading hover:text-primary transition-colors">
+            Blog <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+              <path fill-rule="evenodd"
+                d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                clip-rule="evenodd" />
+            </svg>
+          </a>
+          <a href="#" class="text-[15px] font-medium text-heading hover:text-primary transition-colors">Contact</a>
+        </nav>
+
+        <a href="#"
+          class="hidden md:inline-flex items-center gap-[10] pl-6 pr-4 py-3 rounded-full bg-primary text-white text-sm font-semibold hover:bg-primary-dark hover:-translate-y-px hover:shadow-btn-hover transition-all whitespace-nowrap">
+          Appointment <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+              fill="currentColor" class="size-5">
+              <path fill-rule="evenodd"
+                d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
+                clip-rule="evenodd" />
+            </svg>
+          </span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class=" bg-surface overflow-hidden">
+    <div class="max-w-[1200px] mx-auto px-6 grid grid-cols-2 items-center">
+      <div class="order-1">
+        <span class="inline-block bg-accent text-white text-sm px-3 rounded-full mb-3">
+          Health comes first
+        </span>
+        <h1 class="text-[60px] font-bold text-heading leading-tight mb-5 relative">
+          Smart Health <img src="./assets/shape.png" alt="" class="absolute left-[310px] w-[108px] pointer-events-none" /><br />
+          <span class="text-primary inline-block relative">
+            Solutions
+          </span>
+        </h1>
+        <p class="text-gray-500 text-sm mb-8 leading-relaxed">
+          Book virtual consultations with top specialists in minutes. We put your health first. Book your appointment
+          now.
+        </p>
+        <div class="flex flex-wrap items-center gap-6">
+          <a href="#"
+            class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-primary text-white text-[15px] font-semibold hover:bg-primary-dark hover:-translate-y-px hover:shadow-btn-hover transition-all">
+            <img src="./assets/Vector.png" alt="" class="w-[18px] h-[18px] icon-white" />
+            <span>Find a Doctor</span>
+          </a>
+          <a href="#"
+            class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-white text-primary text-[15px] font-semibold shadow-md hover:bg-gray-100 transition-all">
+            <img src="./assets/phone-2.png" alt="" class="w-5" />
+            <span>Emergency Help</span>
+          </a>
+        </div>
+      </div>
+      <div class="order-2 relative flex justify-center items-center max-w-md mx-auto max-w-none">
+        <img src="./assets/Vector-2.png" alt="" class="absolute right-[8px] top-[40px] w-[75%] max-w-[380px] z-0" />
+        <img src="./assets/doctor.png" alt="Smiling doctor in white coat with stethoscope"
+          class="relative z-10 max-h-[1500px] w-auto mx-auto object-contain" />
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="mt-24 mb-28">
+
+    <div class="relative">
+
+      <div class="max-w-[1200px] mx-auto my-10 px-6 grid grid-cols-2 items-center gap-12 gap-16">
+
+        <div class="mx-auto block">
+          <img src="./assets/image.png" alt="Medical team and healthcare professionals"
+            class="w-[461px] h-[448px] rounded-[20px]" />
+        </div>
+
+        <div class="">
+          <span class="block text-primary text-sm font-semibold mb-3 capitalize">Compassionate Care, Advanced
+            Technology</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-heading leading-tight mb-5">Trusted Healthcare for Your Family
+          </h2>
+          <p class="text-gray-500 text-sm mb-7 leading-relaxed">
+            Since 2005, we've provided world-class medical services with a patient-first approach. Our board-certified
+            doctors and cutting-edge facilities ensure the best outcomes.
+          </p>
+          <ul class="grid sm:grid-cols-2 gap-3 mb-8">
+            <li class="flex items-center gap-2.5 text-sm font-medium text-heading">
+              <span class="flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                  stroke="currentColor" class="w-6 h-6 text-accent">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                </svg>
+              </span>
+              <p class="text-sm">24/7 Emergency Care</p>
+            </li>
+            <li class="flex items-center gap-2.5 text-sm font-medium text-heading">
+              <span class="flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                  stroke="currentColor" class="w-6 h-6 text-accent">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                </svg>
+              </span>
+              <p class="text-sm">JCI-Accredited Facility</p>
+            </li>
+            <li class="flex items-center gap-2.5 text-sm font-medium text-heading">
+              <span class="flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                  stroke="currentColor" class="w-6 h-6 text-accent">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                </svg>
+              </span>
+              <p class="text-sm">50+ Specialist Doctors</p>
+            </li>
+            <li class="flex items-center gap-2.5 text-sm font-medium text-heading">
+              <span class="flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                  stroke="currentColor" class="w-6 h-6 text-accent">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                </svg>
+              </span>
+              <p class="text-sm">Advanced Technology</p>
+            </li>
+            <li class="flex items-center gap-2.5 text-sm font-medium text-heading">
+              <span class="flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                  stroke="currentColor" class="w-6 h-6 text-accent">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                </svg>
+              </span>
+              <p class="text-sm">98% Patient Satisfaction</p>
+            </li>
+            <li class="flex items-center gap-2.5 text-sm font-medium text-heading">
+              <span class="flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                  stroke="currentColor" class="w-6 h-6 text-accent">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                </svg>
+              </span>
+              <p class="text-sm">Multilingual Staff</p>
+            </li>
+            <li class="flex items-center gap-2.5 text-sm font-medium text-heading">
+              <span class="flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                  stroke="currentColor" class="w-6 h-6 text-accent">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                </svg>
+              </span>
+              <p class="text-sm">Free Consultations</p>
+            </li>
+            <li class="flex items-center gap-2.5 text-sm font-medium text-heading">
+              <span class="flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                  stroke="currentColor" class="w-6 h-6 text-accent">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                </svg>
+              </span>
+              <p class="text-sm">Holistic Approach</p>
+            </li>
+          </ul>
+          <a href="#"
+            class="inline-flex items-center gap-1 pl-6 pr-4 py-3 rounded-full bg-primary text-white text-sm font-semibold hover:bg-primary-dark hover:-translate-y-px hover:shadow-btn-hover transition-all">
+            Meet Our Team <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                fill="currentColor" class="size-5">
+                <path fill-rule="evenodd"
+                  d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
+                  clip-rule="evenodd" />
+              </svg>
+            </span>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="absolute left-[920px] top-full mt-[-340px] w-[300px]">
+        <img src="./assets/Heart.png" alt="">
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Services -->
+  <section class="py-20 pb-28 bg-surface relative overflow-hidden">
+
+    <div class="max-w-[1100px] mx-auto px-6 relative">
+      <div class="text-left mb-12">
+        <span class="block text-primary text-sm font-semibold mb-3 capitalize">Our Medical Departments</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-heading leading-tight max-w-[700px] text-left">
+          Complete Wellness Solutions For Every Stage of Life
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-3 gap-6">
+
+        <article
+          class="bg-white border border-border rounded-[20px] p-8 shadow-card hover:-translate-y-1 hover:shadow-card-hover transition-all group">
+          <div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center mb-5">
+            <img src="./assets/Brain .png" alt="" class="w-7 h-7 icon-white" />
+          </div>
+          <h3 class="text-lg font-bold text-heading mb-2.5">Neurology</h3>
+          <p class="text-gray-500 text-sm leading-relaxed mb-5">Advanced stroke, Alzheimer, epilepsy, and nerve disorders with
+            cutting-edge neuroimaging and minimally.</p>
+          <a href="#"
+            class="inline-flex items-center gap-1 text-sm font-semibold text-primary group-hover:gap-2 transition-all">
+            Read More <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                class="size-4">
+                <path fill-rule="evenodd"
+                  d="M2 8a.75.75 0 0 1 .75-.75h8.69L8.22 4.03a.75.75 0 0 1 1.06-1.06l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 0 1-1.06-1.06l3.22-3.22H2.75A.75.75 0 0 1 2 8Z"
+                  clip-rule="evenodd" />
+              </svg></span>
+          </a>
+        </article>
+
+        <article
+          class="bg-white border-2 border-accent rounded-[20px] p-8 shadow-card hover:-translate-y-1 hover:shadow-card-hover transition-all group">
+          <div class="w-16 h-16 rounded-full bg-accent flex items-center justify-center mb-5">
+            <img src="./assets/Brain .png" alt="" class="w-7 h-7 icon-white" />
+          </div>
+          <h3 class="text-lg font-bold text-heading mb-2.5">Neurology</h3>
+          <p class="text-gray-500 text-sm leading-relaxed mb-5">Advanced stroke, Alzheimer, epilepsy, and nerve disorders with
+            cutting-edge neuroimaging and minimally.</p>
+          <a href="#" class="inline-flex items-center gap-1 font-semibold text-accent group-hover:gap-2 transition-all">
+            Read More <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                class="size-4">
+                <path fill-rule="evenodd"
+                  d="M2 8a.75.75 0 0 1 .75-.75h8.69L8.22 4.03a.75.75 0 0 1 1.06-1.06l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 0 1-1.06-1.06l3.22-3.22H2.75A.75.75 0 0 1 2 8Z"
+                  clip-rule="evenodd" />
+              </svg></span>
+          </a>
+        </article>
+
+        <article
+          class="bg-white border border-border rounded-[20px] p-8 shadow-card hover:-translate-y-1 hover:shadow-card-hover transition-all group">
+          <div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center mb-5">
+            <img src="./assets/pediatrics.png" alt="" class="w-7 h-7 icon-white" />
+          </div>
+          <h3 class="text-lg font-bold text-heading mb-2.5">Pediatrics</h3>
+          <p class="text-gray-500 text-sm leading-relaxed mb-5">Specialized care for children from
+            birth to adolescence, including vaccinations, growth.</p>
+          <a href="#"
+            class="inline-flex items-center gap-1 text-sm font-semibold text-primary group-hover:gap-2 transition-all">
+            Read More <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                class="size-4">
+                <path fill-rule="evenodd"
+                  d="M2 8a.75.75 0 0 1 .75-.75h8.69L8.22 4.03a.75.75 0 0 1 1.06-1.06l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 0 1-1.06-1.06l3.22-3.22H2.75A.75.75 0 0 1 2 8Z"
+                  clip-rule="evenodd" />
+              </svg></span>
+          </a>
+        </article>
+
+        <article
+          class="bg-white border border-border rounded-[20px] p-8 shadow-card hover:-translate-y-1 hover:shadow-card-hover transition-all group">
+          <div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center mb-5">
+            <img src="./assets/medical-case.png" alt="" class="w-7 h-7 icon-white" />
+          </div>
+          <h3 class="text-lg font-bold text-heading mb-2.5">Dermatology</h3>
+          <p class="text-gray-500 text-sm leading-relaxed mb-5">Medical and cosmetic skin treatments for acne, psoriasis, skin
+            cancer screening, and anti-aging therapies.</p>
+          <a href="#"
+            class="inline-flex items-center gap-1 text-sm font-semibold text-primary group-hover:gap-2 transition-all">
+            Read More <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                class="size-4">
+                <path fill-rule="evenodd"
+                  d="M2 8a.75.75 0 0 1 .75-.75h8.69L8.22 4.03a.75.75 0 0 1 1.06-1.06l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 0 1-1.06-1.06l3.22-3.22H2.75A.75.75 0 0 1 2 8Z"
+                  clip-rule="evenodd" />
+              </svg></span>
+          </a>
+        </article>
+
+        <article
+          class="bg-white border border-border rounded-[20px] p-8 shadow-card hover:-translate-y-1 hover:shadow-card-hover transition-all group">
+          <div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center mb-5">
+            <img src="./assets/doctor-male.png" alt="" class="w-7 h-7 icon-white" />
+          </div>
+          <h3 class="text-lg font-bold text-heading mb-2.5">Maternity</h3>
+          <p class="text-gray-500 text-sm leading-relaxed mb-5">Complete prenatal classes, delivery suites, and postnatal
+            support for mothers and babies.</p>
+          <a href="#"
+            class="inline-flex items-center gap-1 text-sm font-semibold text-primary group-hover:gap-2 transition-all">
+            Read More <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                class="size-4">
+                <path fill-rule="evenodd"
+                  d="M2 8a.75.75 0 0 1 .75-.75h8.69L8.22 4.03a.75.75 0 0 1 1.06-1.06l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 0 1-1.06-1.06l3.22-3.22H2.75A.75.75 0 0 1 2 8Z"
+                  clip-rule="evenodd" />
+              </svg></span>
+          </a>
+        </article>
+
+        <article
+          class="bg-white border border-border rounded-[20px] p-8 shadow-card hover:-translate-y-1 hover:shadow-card-hover transition-all group">
+          <div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center mb-5">
+            <img src="./assets/oncology.png" alt="" class="w-7 h-7 icon-white" />
+          </div>
+          <h3 class="text-lg font-bold text-heading mb-2.5">Oncology</h3>
+          <p class="text-gray-500 text-sm leading-relaxed mb-5">Personalized chemotherapy, radiation therapy, and immunotherapy
+            plans with 24/7 patient support.</p>
+          <a href="#"
+            class="inline-flex items-center gap-1 text-sm font-semibold text-primary group-hover:gap-2 transition-all">
+            Read More <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                class="size-4">
+                <path fill-rule="evenodd"
+                  d="M2 8a.75.75 0 0 1 .75-.75h8.69L8.22 4.03a.75.75 0 0 1 1.06-1.06l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 0 1-1.06-1.06l3.22-3.22H2.75A.75.75 0 0 1 2 8Z"
+                  clip-rule="evenodd" />
+              </svg></span>
+          </a>
+        </article>
+
+      </div>
+    </div>
+
+    <div class="absolute right-0 bottom-5">
+      <img src="./assets/Capsul.png" alt="" class="w-[180px]">
+    </div>
+
+  </section>
+
+</body>
+
+</html>
